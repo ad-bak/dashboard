@@ -4,13 +4,16 @@ import { tokens } from "../../theme";
 import { mockDataInvoices } from "../../data/mockData";
 
 import Header from "../../components/Header";
+import { useState } from "react";
 
 const Invoices = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const [selectedRows, setSelectedRows] = useState([]);
 
   const handleSelection = (newSelection) => {
-    console.log("Selected rows:", newSelection);
+    setSelectedRows(newSelection);
+    console.log(newSelection);
   };
 
   const columns = [
@@ -73,8 +76,17 @@ const Invoices = () => {
           },
         }}
       >
+        {selectedRows.length > 0 ? (
+          <GridToolbar
+            selectedRows={selectedRows}
+            density="compact"
+            densityOptions={["compact", "standard"]}
+          />
+        ) : (
+          ""
+        )}
         <DataGrid
-          onRowSelectionModelChange={({ ...data }) => handleSelection(data)}
+          onRowSelectionModelChange={(row) => handleSelection(row)}
           checkboxSelection
           rows={mockDataInvoices}
           columns={columns}
