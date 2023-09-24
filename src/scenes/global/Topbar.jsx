@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { ColorModeContext, tokens } from "../../../theme";
+import { ColorModeContext, tokens } from "../../theme";
 import { useContext } from "react";
 import { Box, IconButton, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
@@ -41,8 +41,6 @@ const Topbar = () => {
           <PersonOutlinedIcon />
         </IconButton>
       </Box>
-
-      <IconButton></IconButton>
     </Box>
   );
 };
