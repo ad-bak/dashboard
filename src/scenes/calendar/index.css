@@ -1,0 +1,33 @@
+/* .fc-list-table {
+  background-color: #fff;
+}
+
+.fc-list-table .fc-list-event-title,
+.fc-list-table .fc-list-event-time {
+  color: #fff;
+}
+
+.fc-list-day-cushion {
+  background-color: #fff;
+} */
+
+.fc-list-day-cushion {
+  color: #083473;
+}
+
+/*hover effect*/
+.fc-list-item:hover {
+  background-color: red;
+  color: red;
+}
+
+/*another hover effect*/
+
+.fc-list-item:hover {
+  background-color: red;
+  color: red;
+}
+
+.fc-list-event:hover {
+  --fc-list-event-hover-bg-color: #70d8bd;
+}
