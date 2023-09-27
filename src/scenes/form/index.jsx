@@ -1,4 +1,4 @@
-import { Box, TextField, useMediaQuery } from "@mui/material";
+import { Box, Button, TextField, useMediaQuery } from "@mui/material";
 import Header from "../../components/Header";
 import { Formik } from "formik";
 import * as Yup from "yup";
@@ -147,6 +147,11 @@ const Form = () => {
                   gridColumn: "span 4",
                 }}
               />
+            </Box>
+            <Box display="flex" justifyContent="end" mt="20px">
+              <Button type="submit" color="secondary" variant="contained">
+                Create a New User
+              </Button>
             </Box>
           </form>
         )}
