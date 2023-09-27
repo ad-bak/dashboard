@@ -1,4 +1,4 @@
-import { Box, useMediaQuery } from "@mui/material";
+import { Box, TextField, useMediaQuery } from "@mui/material";
 import Header from "../../components/Header";
 import { Formik } from "formik";
 import * as Yup from "yup";
@@ -56,7 +56,98 @@ const Form = () => {
               sx={{
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
               }}
-            ></Box>
+            >
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="First Name"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.firstName}
+                name="firstName"
+                error={touched.firstName && Boolean(errors.firstName)}
+                helperText={touched.firstName && errors.firstName}
+                sx={{
+                  gridColumn: "span 2",
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Last Name"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.lastName}
+                name="firstName"
+                error={touched.lastName && Boolean(errors.lastName)}
+                helperText={touched.lastName && errors.lastName}
+                sx={{
+                  gridColumn: "span 2",
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="email"
+                label="Email"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.email}
+                name="email"
+                error={touched.email && Boolean(errors.email)}
+                helperText={touched.email && errors.email}
+                sx={{
+                  gridColumn: "span 4",
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Contact Number"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.contact}
+                name="contact"
+                error={touched.contact && Boolean(errors.contact)}
+                helperText={touched.contact && errors.contact}
+                sx={{
+                  gridColumn: "span 4",
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Address 1"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.address1}
+                name="firstName"
+                error={touched.address1 && Boolean(errors.address1)}
+                helperText={touched.address1 && errors.address1}
+                sx={{
+                  gridColumn: "span 4",
+                }}
+              />
+              <TextField
+                fullWidth
+                variant="filled"
+                type="text"
+                label="Address 2"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={values.address2}
+                name="address2"
+                error={touched.address2 && Boolean(errors.address2)}
+                helperText={touched.address2 && errors.address2}
+                sx={{
+                  gridColumn: "span 4",
+                }}
+              />
+            </Box>
           </form>
         )}
       </Formik>
